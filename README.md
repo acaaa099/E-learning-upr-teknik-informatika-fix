@@ -136,31 +136,19 @@ Internet → CloudFront (CDN) → ALB (Load Balancer)
 - AWS CLI v2 · Terraform ≥ 1.5 · Python ≥ 3.10
 
 ```bash
-# Konfigurasi AWS CLI
-aws configure
-# Region: ap-southeast-2 | Output: json
+
 ```
 
 ### Deploy Infrastruktur
 
 ```bash
-git clone https://github.com/acaaa099/portal-informasi-kampus-upr.git
-cd portal-informasi-kampus-upr/terraform
 
-cp terraform.tfvars.example terraform.tfvars  # ⚠️ jangan di-commit
-terraform init
-terraform plan
-terraform apply
 ```
 
 ### Jalankan Backend
 
 ```bash
-cd backend
-python -m venv venv && source venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env
-python app/main.py
+
 ```
 
 ---
@@ -183,6 +171,14 @@ python app/main.py
 - S3 bucket private — akses hanya via CloudFront (OAC)
 - IAM least privilege — setiap layanan hanya dapat izin minimal
 - File `.env`, `*.tfvars`, `*.pem`, `terraform.tfstate` sudah masuk `.gitignore`
+
+---
+
+## 📄 Dokumen Proyek
+
+- 📝 [Laporan Tugas Minggu 1](https://drive.google.com/drive/folders/1pJUb0lmq-Y6LAHOJX3bs5u0-xI5DwpAV?usp=drive_link)
+- 🖼️ [Diagram Arsitektur](https://drive.google.com/drive/folders/1pJUb0lmq-Y6LAHOJX3bs5u0-xI5DwpAV?usp=drive_link)
+- 🔗 [Repository GitHub](https://github.com/acaaa099/portal-informasi-kampus-upr)
 
 ---
 
