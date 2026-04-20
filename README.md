@@ -50,55 +50,20 @@ Komponen pendukung:
 ├── README.md
 ├── .gitignore
 ├── docs/
-│   ├── week1-planning/
-│   │   ├── laporan-minggu1.docx
-│   │   ├── laporan-minggu1.pdf
-│   │   ├── estimasi-biaya-azure.xlsx
-│   │   ├── pembagian-tugas.md
-│   │   └── readme-week1.md
-│   ├── week2-infrastructure/
-│   │   ├── inventaris-resource.md
-│   │   ├── konfigurasi-iam.md
-│   │   ├── screenshot-vnet-subnet/
-│   │   └── progress-minggu2.md
-│   ├── week3-core-services/
-│   │   ├── pengujian-fungsional.md
-│   │   ├── bukti-database/
-│   │   ├── bukti-storage/
-│   │   ├── bukti-load-balancer/
-│   │   └── progress-minggu3.md
-│   ├── week4-monitoring-security/
-│   │   ├── dashboard-monitoring/
-│   │   ├── alert-rules.md
-│   │   ├── security-audit.md
-│   │   ├── backup-restore.md
-│   │   └── analisis-biaya.md
-│   ├── week5-final-demo/
-│   │   ├── laporan-akhir.pdf
-│   │   ├── slide-presentasi.pptx
-│   │   ├── script-demo.md
-│   │   └── refleksi-individu/
-│   └── assets/
-│       ├── diagrams/
-│       └── screenshots/
+│   ├── laporan-proyek.docx
+│   ├── laporan-proyek.pdf
+│   ├── inventaris-resource.md
+│   ├── konfigurasi-iam.md
+│   ├── progress-minggu2.md
+│   └── screenshots/
 ├── terraform/
-│   ├── environments/
-│   │   └── dev/
-│   └── modules/
-│       ├── networking/
-│       ├── compute/
-│       ├── database/
-│       ├── security/
-│       └── monitoring/
-├── app/
-│   ├── backend/
-│   └── frontend/
-├── tests/
-│   ├── api/
-│   └── load/
-├── scripts/
-└── .github/
-    └── workflows/
+│   └── export/
+│       └── main.tf
+├── assets/
+│   └── diagrams/
+└── app/
+    ├── backend/
+    └── frontend/
 ```
 
 ---
