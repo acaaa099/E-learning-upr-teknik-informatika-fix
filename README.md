@@ -50,20 +50,21 @@ Komponen pendukung:
 ├── README.md
 ├── .gitignore
 ├── docs/
-│   ├── laporan-proyek.docx
-│   ├── laporan-proyek.pdf
 │   ├── inventaris-resource.md
 │   ├── konfigurasi-iam.md
-│   ├── progress-minggu2.md
-│   └── screenshots/
+│   └── progress-proyek.md
 ├── terraform/
 │   └── export/
 │       └── main.tf
 ├── assets/
 │   └── diagrams/
+│       ├── README.md
+│       └── diagram-arsitektur-azure.png
 └── app/
     ├── backend/
+    │   └── README.md
     └── frontend/
+        └── README.md
 ```
 
 ---
