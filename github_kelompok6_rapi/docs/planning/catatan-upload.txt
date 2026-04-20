@@ -1,0 +1,12 @@
+File yang sebaiknya diunggah ke repository:
+1. README.md
+2. docs/architecture/diagram_azure_kelompok6_fix.drawio
+3. docs/architecture/diagram_azure_kelompok6_fix.png
+4. docs/planning/laporan-minggu1.docx atau .pdf
+5. docs/planning/estimasi-biaya-azure.xlsx
+6. screenshot pendukung jika ada
+
+Saran commit awal:
+- docs: add final Azure architecture diagram
+- docs: add week 1 planning report
+- chore: add README and gitignore

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Azure Fix">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1600">
+      <root>
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+
+        <mxCell id="user" value="Internet User" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="30" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cdnBox" value="CDN Layer" style="rounded=0;dashed=1;strokeColor=#f59e0b;fillColor=none;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="140" width="740" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="cdn" value="Azure Front Door (CDN)&#xa;Edge caching &amp; global delivery" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#f59e0b;" vertex="1" parent="1">
+          <mxGeometry x="320" y="190" width="440" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="lbBox" value="Load Balancer" style="rounded=0;dashed=1;strokeColor=#2563eb;fillColor=none;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="340" width="740" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="lb" value="Azure Load Balancer&#xa;Traffic distribution" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2563eb;" vertex="1" parent="1">
+          <mxGeometry x="320" y="390" width="440" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="computeBox" value="Compute (Virtual Machines)" style="rounded=0;dashed=1;strokeColor=#228b22;fillColor=none;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="530" width="940" height="210" as="geometry"/>
+        </mxCell>
+        <mxCell id="vm1" value="Azure VM Instance 1&#xa;App server (Standard_B2s)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#228b22;" vertex="1" parent="1">
+          <mxGeometry x="110" y="600" width="320" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="vm2" value="Azure VM Instance 2&#xa;App server (Standard_B2s)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#228b22;" vertex="1" parent="1">
+          <mxGeometry x="650" y="600" width="320" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="dataBox" value="Data Layer" style="rounded=0;dashed=1;strokeColor=#ef4444;fillColor=none;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="790" width="940" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="db" value="Azure Database for MySQL&#xa;Relational database" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#ef4444;" vertex="1" parent="1">
+          <mxGeometry x="320" y="845" width="440" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="netBox" value="Networking (Virtual Network)" style="rounded=0;dashed=1;strokeColor=#2563eb;fillColor=none;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1000" width="940" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="vnet" value="Azure VNet + NSG&#xa;Public &amp; private subnets" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2563eb;" vertex="1" parent="1">
+          <mxGeometry x="90" y="1050" width="400" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="dns" value="Public IP + DNS Zone&#xa;Internet exposure &amp; routing" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2563eb;" vertex="1" parent="1">
+          <mxGeometry x="590" y="1050" width="400" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="secBox" value="Security &amp; Monitoring" style="rounded=0;dashed=1;strokeColor=#888888;fillColor=none;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1210" width="940" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="iam" value="Azure IAM (RBAC)&#xa;Access control &amp; roles" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#888888;" vertex="1" parent="1">
+          <mxGeometry x="90" y="1260" width="400" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="mon" value="Azure Monitor + Log Analytics&#xa;Logs, metrics &amp; alerts" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#228b22;" vertex="1" parent="1">
+          <mxGeometry x="590" y="1260" width="400" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e1" style="endArrow=classic;html=1;" edge="1" parent="1" source="user" target="cdn"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" style="endArrow=classic;html=1;" edge="1" parent="1" source="cdn" target="lb"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3" style="endArrow=classic;html=1;" edge="1" parent="1" source="lb" target="vm1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e4" style="endArrow=classic;html=1;" edge="1" parent="1" source="lb" target="vm2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e5" style="endArrow=classic;html=1;" edge="1" parent="1" source="vm1" target="db"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e6" style="endArrow=classic;html=1;" edge="1" parent="1" source="vm2" target="db"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
