@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-// sementara kosong dulu
-router.get('/', (req, res) => {
-  res.json({ message: 'Materials route working' });
-});
+const {
+  getMaterials
+} = require('../controllers/materialsController');
+
+router.get('/', getMaterials);
 
 module.exports = router;
