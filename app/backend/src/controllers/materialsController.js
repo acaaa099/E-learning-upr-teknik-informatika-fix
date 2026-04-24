@@ -1,4 +1,5 @@
 const db = require('../config/db');
+const { uploadToBlob } = require('../config/blob');
 
 const getMaterials = async (req, res) => {
   try {
@@ -82,8 +83,57 @@ const createMaterial = async (req, res) => {
   }
 };
 
+const uploadMaterialFile = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    if (!req.file) {
+      return res.status(400).json({
+        success: false,
+        message: 'File is required'
+      });
+    }
+
+    const [rows] = await db.query(
+      'SELECT id FROM materials WHERE id = ?',
+      [id]
+    );
+
+    if (rows.length === 0) {
+      return res.status(404).json({
+        success: false,
+        message: 'Material not found'
+      });
+    }
+
+    const blobUrl = await uploadToBlob(req.file);
+
+    await db.query(
+      'UPDATE materials SET filename = ?, blob_url = ? WHERE id = ?',
+      [req.file.originalname, blobUrl, id]
+    );
+
+    res.json({
+      success: true,
+      message: 'File uploaded successfully',
+      data: {
+        id,
+        filename: req.file.originalname,
+        blob_url: blobUrl
+      }
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: 'Failed to upload file',
+      error: error.message
+    });
+  }
+};
+
 module.exports = {
   getMaterials,
   getMaterialById,
-  createMaterial
+  createMaterial,
+  uploadMaterialFile
 };
