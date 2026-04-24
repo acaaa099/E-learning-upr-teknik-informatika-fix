@@ -163,6 +163,16 @@ File materi berhasil diunggah ke container `materials` pada Storage Account `ste
 ### Kendala
 Kendala pada Minggu 3 adalah penyesuaian koneksi Azure MySQL yang membutuhkan konfigurasi SSL karena koneksi tidak aman ditolak oleh server. Selain itu, proses pengujian endpoint membutuhkan penyesuaian file `.env` lokal agar backend dapat membaca konfigurasi database dan storage dengan benar.
 
+### Deploy Backend ke VM
+
+- Backend berhasil dideploy ke Azure Virtual Machine (vm1-elearning-kel6)
+- Public IP: 70.153.148.189
+- API dapat diakses secara publik melalui browser
+
+Contoh endpoint:
+- http://70.153.148.189:3000/health
+- http://70.153.148.189:3000/materials
+  
 ### Hasil Minggu 3
 Minggu 3 berhasil menyelesaikan implementasi backend inti. Backend sudah dapat berjalan secara lokal, terhubung ke Azure Database for MySQL, melakukan insert dan read data materi, serta mengunggah file ke Azure Blob Storage.
 
