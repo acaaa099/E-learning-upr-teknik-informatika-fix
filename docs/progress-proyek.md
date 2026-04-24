@@ -168,6 +168,8 @@ Minggu 3 berhasil menyelesaikan implementasi backend inti. Backend sudah dapat b
 
 ### Status
 Selesai untuk implementasi backend lokal. Tahap berikutnya adalah deploy backend ke Azure Virtual Machine dan menguji akses dari lingkungan public.
+- Backend berhasil dideploy ke VM1 dengan public IP `70.153.148.189`
+- Endpoint public `/health` dan `/materials` berhasil diuji dari browser
 
 ---
 
