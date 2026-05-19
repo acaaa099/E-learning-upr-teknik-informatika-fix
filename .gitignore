@@ -37,3 +37,13 @@ node_modules/
 
 # Logs
 *.log
+
+
+# Upload files
+app/backend/uploads/
+*.mp4
+*.jpg
+*.png
+
+# Test files
+materi-test.txt
