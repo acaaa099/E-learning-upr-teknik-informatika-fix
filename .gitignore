@@ -49,3 +49,5 @@ app/backend/uploads/
 materi-test.txt
 
 app/backend/uploads/
+
+*.zip
